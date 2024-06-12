@@ -46,4 +46,20 @@ def user_management_menu():
             print("Invalid choice")
 
 def task_management_menu():
-    pass
+     while True:
+        print("\nTask Management Menu:")
+        print("1. Create Task")
+        print("2. Delete Task")
+        print("3. View All Tasks")
+        print("4. Back to Main Menu")
+        choice = input("> ")
+        if choice == "1":
+            create_task_menu()
+        elif choice == "2":
+            delete_task_menu()
+        elif choice == "3":
+            view_all_tasks()
+        elif choice == "4":
+            return
+        else:
+            print("Invalid choice")
