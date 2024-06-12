@@ -160,6 +160,16 @@ def filter_tasks_by_priority():
     else:
         print("No tasks found with the specified priority.")
 
+def filter_tasks_by_due_date():
+    print("\nFilter Tasks by Due Date:")
+    due_date = input("Enter due date (YYYY-MM-DD) to filter tasks: ")
+    tasks = session.query(Task).filter(Task.due_date == due_date).all()
+    if tasks:
+        for task in tasks:
+            print(f"ID: {task.id}, Name: {task.name}, Priority: {task.priority}, Due Date: {task.due_date}")
+    else:
+        print("No tasks found with the specified due date.")
+
 
 
 
