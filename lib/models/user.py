@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 from .db import Base  
 
-# Create user class
+# Create User class
 class User(Base):
     __tablename__ = "users"
     __table_args__ = {'extend_existing': True}
