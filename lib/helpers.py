@@ -32,4 +32,7 @@ def create_task(name, description, priority, due_date, assigned_to=None):
     session.commit()
     return task
 
+def get_task_by_id(task_id):
+    return session.query(Task).filter(Task.id == task_id).first()
+
 
