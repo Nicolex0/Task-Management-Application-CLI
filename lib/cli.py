@@ -110,3 +110,12 @@ def view_all_users():
             print(f"ID: {user.id}, Username: {user.username}, Email: {user.email}")
     else:
         print("No users found.")
+
+def create_task_menu():
+    print("\nCreate Task:")
+    name = input("Enter task name: ")
+    description = input("Enter task description: ")
+    priority = int(input("Enter task priority (1-5): "))
+    due_date = input("Enter task due date (YYYY-MM-DD): ")
+    task = create_task(name, description, priority, due_date)
+    print(f"Task created successfully with ID: {task.id}")
