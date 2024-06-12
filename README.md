@@ -53,7 +53,7 @@ Our MVP includes the following features:
 * Create virtual environment using `pipenv install.`
 * Enter the virtual environment using `pipenv shell`
 * Initialize the database using python `initialize_db.py.`
-* Run the application using `python cli.py.`
+* Run the application using `python -m lib.cli`
 
 ## Usage 
 
