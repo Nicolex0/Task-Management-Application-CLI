@@ -101,3 +101,12 @@ def delete_user_menu():
         print("User deleted successfully.")
     else:
         print("User not found.")
+
+def view_all_users():
+    print("\nAll Users:")
+    users = get_all_users()
+    if users:
+        for user in users:
+            print(f"ID: {user.id}, Username: {user.username}, Email: {user.email}")
+    else:
+        print("No users found.")
