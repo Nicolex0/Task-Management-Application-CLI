@@ -93,3 +93,11 @@ def create_user_menu():
     password = input("Enter password: ")
     user = create_user(username, email, password)
     print(f"User created successfully with ID: {user.id}")
+
+def delete_user_menu():
+    print("\nDelete User:")
+    user_id = input("Enter user ID to delete: ")
+    if delete_user(user_id):
+        print("User deleted successfully.")
+    else:
+        print("User not found.")
