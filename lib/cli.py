@@ -137,5 +137,18 @@ def view_all_tasks():
     else:
         print("No tasks found.")
 
+def assign_task_to_user():
+    print("\nAssign Task to User:")
+    task_id = input("Enter task ID to assign: ")
+    user_id = input("Enter user ID to assign task to: ")
+    task = get_task_by_id(task_id)
+    user = get_user_by_id(user_id)
+    if task and user:
+        task.assigned_to = user.id
+        session.commit()
+        print("Task assigned successfully.")
+    else:
+        print("Task or user not found.")
+
 
 
