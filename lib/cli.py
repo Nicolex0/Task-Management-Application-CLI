@@ -184,6 +184,13 @@ def view_tasks_assigned_to_user():
     else:
         print("User not found.")
 
+def exit_program():
+    print("Goodbye!")
+    sys.exit()
+
+if __name__ == "__main__":
+    main()
+
 
 
 
