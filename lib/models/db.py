@@ -9,5 +9,8 @@ DATABASE_URL = 'sqlite:///task_manager.db'
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 Base = declarative_base()
 
-
+#Set up LocalSession
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+session = SessionLocal() 
+Base.metadata.create_all(engine)
 
