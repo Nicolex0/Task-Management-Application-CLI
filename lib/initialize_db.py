@@ -14,3 +14,7 @@ if not any(index['name'] == 'ix_users_username' for index in indexes):
 else:
     print("Index 'ix_users_username' already exists.")
 
+# Create a session
+Session = sessionmaker(bind=engine)
+session = Session()
+
