@@ -35,4 +35,16 @@ def create_task(name, description, priority, due_date, assigned_to=None):
 def get_task_by_id(task_id):
     return session.query(Task).filter(Task.id == task_id).first()
 
+def delete_task(task_id):
+    task = session.query(Task).filter(Task.id == task_id).first()
+    if task:
+        session.delete(task)
+        session.commit()
+        return True
+    return False
+
+def get_all_tasks():
+    return session.query(Task).all()
+
+
 
