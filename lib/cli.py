@@ -119,3 +119,13 @@ def create_task_menu():
     due_date = input("Enter task due date (YYYY-MM-DD): ")
     task = create_task(name, description, priority, due_date)
     print(f"Task created successfully with ID: {task.id}")
+
+def delete_task_menu():
+    print("\nDelete Task:")
+    task_id = input("Enter task ID to delete: ")
+    if delete_task(task_id):
+        print("Task deleted successfully.")
+    else:
+        print("Task not found.")
+
+
