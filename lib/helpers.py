@@ -24,3 +24,12 @@ def delete_user(user_id):
 
 def get_all_users():
     return session.query(User).all()
+
+# Helper functions for Task model
+def create_task(name, description, priority, due_date, assigned_to=None):
+    task = Task(name=name, description=description, priority=priority, due_date=due_date, assigned_to=assigned_to)
+    session.add(task)
+    session.commit()
+    return task
+
+
