@@ -13,5 +13,10 @@ def create_connection(db_file):
 
 # Path to your SQLite database file
 db_file = "task_manager.db"
+
 # Attempt to establish a connection to the database
 conn = create_connection(db_file)
+
+# Check if the connection was successful before performing any data operations
+if conn is not None:
+    pass
