@@ -18,3 +18,13 @@ else:
 Session = sessionmaker(bind=engine)
 session = Session()
 
+# Create some initial data only if tables are created successfully
+if not indexes or not any(index['name'] == 'ix_users_username' for index in indexes):
+    user1 = User(username='john', email='john@example.com', password='password')
+    session.add(user1)
+    session.commit()
+
+    task1 = Task(name='Task 1', description='Description 1', priority=1, due_date='2023-06-30', assigned_to=user1)
+    session.add(task1)
+    session.commit()
+
