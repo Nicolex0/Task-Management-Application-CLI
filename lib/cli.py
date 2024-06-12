@@ -150,5 +150,16 @@ def assign_task_to_user():
     else:
         print("Task or user not found.")
 
+def filter_tasks_by_priority():
+    print("\nFilter Tasks by Priority:")
+    priority = int(input("Enter priority level to filter tasks: "))
+    tasks = session.query(Task).filter(Task.priority == priority).all()
+    if tasks:
+        for task in tasks:
+            print(f"ID: {task.id}, Name: {task.name}, Priority: {task.priority}, Due Date: {task.due_date}")
+    else:
+        print("No tasks found with the specified priority.")
+
+
 
 
