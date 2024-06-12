@@ -6,3 +6,6 @@ import os
 
 # Add task_manager.db for task management database storage
 DATABASE_FILE = "task_manager.db"
+
+# Configure database URL for SQlite database connection
+DATABASE_URL = f"sqlite:///{os.path.join(os.path.dirname(__file__), DATABASE_FILE)}"
