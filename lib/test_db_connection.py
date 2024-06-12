@@ -10,3 +10,6 @@ def create_connection(db_file):
     except sqlite3.Error as e:
         print(f"Error connecting to SQLite database: {e}")
         return None
+
+# Path to your SQLite database file
+db_file = "task_manager.db"
