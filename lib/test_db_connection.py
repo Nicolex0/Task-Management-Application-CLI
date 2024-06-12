@@ -19,4 +19,8 @@ conn = create_connection(db_file)
 
 # Check if the connection was successful before performing any data operations
 if conn is not None:
+    # Perform your data operations here
+    # For example, executing SQL queries, inserting data, etc.
     pass
+else:
+    print("Database connection failed, please check the connection settings.")
