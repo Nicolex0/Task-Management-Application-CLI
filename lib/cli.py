@@ -85,3 +85,11 @@ def task_assignment_and_filtering_menu():
             return
         else:
             print("Invalid choice")
+
+def create_user_menu():
+    print("\nCreate User:")
+    username = input("Enter username: ")
+    email = input("Enter email: ")
+    password = input("Enter password: ")
+    user = create_user(username, email, password)
+    print(f"User created successfully with ID: {user.id}")
