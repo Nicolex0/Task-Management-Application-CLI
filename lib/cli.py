@@ -63,3 +63,25 @@ def task_management_menu():
             return
         else:
             print("Invalid choice")
+
+def task_assignment_and_filtering_menu():
+    while True:
+        print("\nTask Assignment and Filtering Menu:")
+        print("1. Assign Task to User")
+        print("2. Filter Tasks by Priority")
+        print("3. Filter Tasks by Due Date")
+        print("4. View Tasks Assigned to User")
+        print("5. Back to Main Menu")
+        choice = input("> ")
+        if choice == "1":
+            assign_task_to_user()
+        elif choice == "2":
+            filter_tasks_by_priority()
+        elif choice == "3":
+            filter_tasks_by_due_date()
+        elif choice == "4":
+            view_tasks_assigned_to_user()
+        elif choice == "5":
+            return
+        else:
+            print("Invalid choice")
