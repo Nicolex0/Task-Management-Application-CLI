@@ -15,3 +15,6 @@ engine = create_engine(DATABASE_URL)
 
 # Set up SessionLocal with session maker bound to engine
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+#Define base class using declarative base
+Base = declarative_base()
