@@ -8,4 +8,9 @@ from lib.models.task import Task
 inspector = inspect(engine)
 indexes = inspector.get_indexes('users')
 
+if not any(index['name'] == 'ix_users_username' for index in indexes):
+    # Create all tables if the index doesn't exist
+    Base.metadata.create_all(bind=engine)
+else:
+    print("Index 'ix_users_username' already exists.")
 
