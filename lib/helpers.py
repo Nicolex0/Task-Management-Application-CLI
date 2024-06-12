@@ -21,3 +21,6 @@ def delete_user(user_id):
         session.commit()
         return True
     return False
+
+def get_all_users():
+    return session.query(User).all()
