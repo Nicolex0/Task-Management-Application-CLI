@@ -170,6 +170,20 @@ def filter_tasks_by_due_date():
     else:
         print("No tasks found with the specified due date.")
 
+def view_tasks_assigned_to_user():
+    print("\nView Tasks Assigned to User:")
+    user_id = input("Enter user ID to view tasks assigned to: ")
+    user = get_user_by_id(user_id)
+    if user:
+        tasks = session.query(Task).filter(Task.assigned_to == user.id).all()
+        if tasks:
+            for task in tasks:
+                print(f"ID: {task.id}, Name: {task.name}, Priority: {task.priority}, Due Date: {task.due_date}")
+        else:
+            print("No tasks assigned to this user.")
+    else:
+        print("User not found.")
+
 
 
 
