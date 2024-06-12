@@ -128,4 +128,14 @@ def delete_task_menu():
     else:
         print("Task not found.")
 
+def view_all_tasks():
+    print("\nAll Tasks:")
+    tasks = get_all_tasks()
+    if tasks:
+        for task in tasks:
+            print(f"ID: {task.id}, Name: {task.name}, Priority: {task.priority}, Due Date: {task.due_date}")
+    else:
+        print("No tasks found.")
+
+
 
