@@ -18,3 +18,10 @@ def main():
             task_assignment_and_filtering_menu()
         else:
             print("Invalid choice")
+
+def menu():
+    print("Please select an option:")
+    print("0. Exit the program")
+    print("1. User Management")
+    print("2. Task Management")
+    print("3. Task Assignment and Filtering")
