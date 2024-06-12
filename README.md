@@ -52,7 +52,7 @@ Our MVP includes the following features:
 * Fork and clone the repository using `git clone https://github.com/your-username/task-management-app.git.`
 * Create virtual environment using `pipenv install.`
 * Enter the virtual environment using `pipenv shell`
-* Initialize the database using python `initialize_db.py.`
+* Initialize the database using `python initialize_db.py.`
 * Run the application using `python -m lib.cli`
 
 ## Usage 
