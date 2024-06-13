@@ -43,7 +43,7 @@ Our MVP includes the following features:
 * `Pipfile`: Pipfile for the application.
 * `Pipfile.lock`: Lock file for the Pipfile.
 * `README.md`: This README file.
-* * `initialize_db.py`: Script to initialize the database.
+* `initialize_db.py`: Script to initialize the database.
 * `task_manager.db`: Database file for the application.
 
 
