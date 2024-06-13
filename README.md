@@ -37,13 +37,13 @@ Our MVP includes the following features:
 * `cli.py`: Command-line interface for the application.
 * `database.py`: Database connection and operations.
 * `helpers.py`: Helper functions for the application.
-* `initialize_db.py`: Script to initialize the database.
 * `requirements.txt`: List of dependencies required by the application.
 * `test_db_connection.py`: Script to test the database connection.
 * `LICENSE`: License information for the application.
 * `Pipfile`: Pipfile for the application.
 * `Pipfile.lock`: Lock file for the Pipfile.
 * `README.md`: This README file.
+* * `initialize_db.py`: Script to initialize the database.
 * `task_manager.db`: Database file for the application.
 
 
@@ -52,8 +52,12 @@ Our MVP includes the following features:
 * Fork and clone the repository using `git clone https://github.com/your-username/task-management-app.git.`
 * Create virtual environment using `pipenv install.`
 * Enter the virtual environment using `pipenv shell`
-* Initialize the database using `python initialize_db.py.`
+* Initialize the database using `python initialize_db.py`
+* (Note: There's a mock database named `task_manager.db`. You can use it to test the application, or delete it. 
+   After deletion, once you run `python initialize_db.py`, a new empty database file will be created that you can 
+   fill with your own data.)
 * Run the application using `python -m lib.cli`
+
 
 ## Usage 
 
