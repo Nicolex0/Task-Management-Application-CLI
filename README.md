@@ -7,7 +7,7 @@ This application enables users to add, remove, and assign tasks to various users
 
 Our goal is to enhance productivity and task organization, making it easier for teams to work efficiently and effectively.
 
-## Minimum Viable Product (MVP) (ndjdjdjjfjfjfjfjfjfjjfjffj
+## Minimum Viable Product (MVP)
 
 Our MVP includes the following features:
 
